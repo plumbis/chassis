@@ -11,8 +11,16 @@
   command: net commit
   when: prepend_count.stdout | int < 3
 
+- name: Verify current version
+  command: cat /etc/lsb-release
+
 - name: Verify traffic is drained. This will take a moment...
   interface_stats:
+
+- name: Run Apt Upgrade 
+  apt: 
+    update_cache: yes
+    upgrade: yes
 
 - name: Reboot!
   shell: sleep 2 && shutdown -r now "Ansible reboot triggered"
@@ -28,6 +36,9 @@
     timeout=180
   delegate_to: localhost
   become: false
+
+- name: Verify upgraded version
+  command: cat /etc/lsb-release
 
 # This is mainly to let netd start
 - name: Give services time to start 
