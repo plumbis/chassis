@@ -1,0 +1,16 @@
+---
+- hosts: 01-linecards
+  become: yes
+  tasks:
+    - include: roles/linecard_common/tasks/upgrade.yml
+      static: yes
+  handlers:
+    - include: handlers/main.yml
+
+- hosts: 02-linecards
+  become: yes
+  tasks:
+    - include: roles/linecard_common/tasks/upgrade.yml
+      static: yes
+  handlers:
+    - include: handlers/main.yml
