@@ -1,0 +1,103 @@
+[lc1]
+act-omp01-lc101 ansible_user=cumulus ansible_port=22 ansible_ssh_pass=CumulusLinux! ansible_become_pass=CumulusLinux!
+act-omp01-lc102 ansible_user=cumulus ansible_port=22 ansible_ssh_pass=CumulusLinux! ansible_become_pass=CumulusLinux!
+
+[lc2]
+act-omp01-lc201 ansible_user=cumulus ansible_port=22 ansible_ssh_pass=CumulusLinux! ansible_become_pass=CumulusLinux!
+act-omp01-lc202 ansible_user=cumulus ansible_port=22 ansible_ssh_pass=CumulusLinux! ansible_become_pass=CumulusLinux!
+
+[lc3]
+act-omp01-lc301 ansible_user=cumulus ansible_port=22 ansible_ssh_pass=CumulusLinux! ansible_become_pass=CumulusLinux!
+act-omp01-lc302 ansible_user=cumulus ansible_port=22 ansible_ssh_pass=CumulusLinux! ansible_become_pass=CumulusLinux!
+
+[lc4]
+act-omp01-lc401 ansible_user=cumulus ansible_port=22 ansible_ssh_pass=CumulusLinux! ansible_become_pass=CumulusLinux!
+act-omp01-lc402 ansible_user=cumulus ansible_port=22 ansible_ssh_pass=CumulusLinux! ansible_become_pass=CumulusLinux!
+
+
+[lc5]
+act-omp01-lc501 ansible_user=cumulus ansible_port=22 ansible_ssh_pass=CumulusLinux! ansible_become_pass=CumulusLinux!
+act-omp01-lc502 ansible_user=cumulus ansible_port=22 ansible_ssh_pass=CumulusLinux! ansible_become_pass=CumulusLinux!
+
+[lc6]
+act-omp01-lc601 ansible_user=cumulus ansible_port=22 ansible_ssh_pass=CumulusLinux! ansible_become_pass=CumulusLinux!
+act-omp01-lc602 ansible_user=cumulus ansible_port=22 ansible_ssh_pass=CumulusLinux! ansible_become_pass=CumulusLinux!
+
+[lc7]
+act-omp01-lc701 ansible_user=cumulus ansible_port=22 ansible_ssh_pass=CumulusLinux! ansible_become_pass=CumulusLinux!
+act-omp01-lc702 ansible_user=cumulus ansible_port=22 ansible_ssh_pass=CumulusLinux! ansible_become_pass=CumulusLinux!
+
+[lc8]
+act-omp01-lc801 ansible_user=cumulus ansible_port=22 ansible_ssh_pass=CumulusLinux! ansible_become_pass=CumulusLinux!
+act-omp01-lc802 ansible_user=cumulus ansible_port=22 ansible_ssh_pass=CumulusLinux! ansible_become_pass=CumulusLinux!
+
+[linecards:children]
+lc1
+lc2
+lc3
+lc4
+lc5
+lc6
+lc7
+lc8
+
+
+[fc1]
+act-omp01-fc101 ansible_user=cumulus ansible_port=22 ansible_ssh_pass=CumulusLinux! ansible_become_pass=CumulusLinux!
+act-omp01-fc102 ansible_user=cumulus ansible_port=22 ansible_ssh_pass=CumulusLinux! ansible_become_pass=CumulusLinux!
+
+[fc2]
+act-omp01-fc201 ansible_user=cumulus ansible_port=22 ansible_ssh_pass=CumulusLinux! ansible_become_pass=CumulusLinux!
+act-omp01-fc202 ansible_user=cumulus ansible_port=22 ansible_ssh_pass=CumulusLinux! ansible_become_pass=CumulusLinux!
+
+[fc3]
+act-omp01-fc301 ansible_user=cumulus ansible_port=22 ansible_ssh_pass=CumulusLinux! ansible_become_pass=CumulusLinux!
+act-omp01-fc302 ansible_user=cumulus ansible_port=22 ansible_ssh_pass=CumulusLinux! ansible_become_pass=CumulusLinux!
+
+[fc4]
+act-omp01-fc401 ansible_user=cumulus ansible_port=22 ansible_ssh_pass=CumulusLinux! ansible_become_pass=CumulusLinux!
+act-omp01-fc402 ansible_user=cumulus ansible_port=22 ansible_ssh_pass=CumulusLinux! ansible_become_pass=CumulusLinux!
+
+
+[fabriccards:children]
+fc1
+fc2
+fc3
+fc4
+
+[chassis:children]
+linecards
+fabriccards
+
+[01-linecards]
+act-omp01-lc101
+act-omp01-lc201
+act-omp01-lc301
+act-omp01-lc401
+act-omp01-lc501
+act-omp01-lc601
+act-omp01-lc701
+act-omp01-lc801
+
+[02-linecards]
+act-omp01-lc102
+act-omp01-lc202
+act-omp01-lc302
+act-omp01-lc402
+act-omp01-lc502
+act-omp01-lc602
+act-omp01-lc702
+act-omp01-lc802
+
+[01-fabric]
+act-omp01-fc101
+act-omp01-fc201
+act-omp01-fc301
+act-omp01-fc401
+
+[02-fabric]
+act-omp01-fc102
+act-omp01-fc202
+act-omp01-fc302
+act-omp01-fc402
+

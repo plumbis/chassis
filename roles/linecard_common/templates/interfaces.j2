@@ -1,0 +1,15 @@
+source /etc/network/interfaces.d/*.intf
+
+# The loopback network interface
+auto lo
+iface lo inet loopback
+   address {{node[ansible_hostname]["interfaces"]["lo"]["ipv4"]}}
+
+
+# The primary network interface
+auto eth0
+iface eth0 inet dhcp
+
+iface eth1 inet dhcp
+
+iface eth2 inet dhcp

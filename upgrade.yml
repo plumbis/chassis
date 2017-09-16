@@ -1,0 +1,16 @@
+---
+- hosts: 01-fabric
+  become: yes
+  tasks:
+    - include: roles/fabriccard_common/tasks/upgrade.yml
+      static: yes
+  handlers:
+    - include: handlers/main.yml
+
+- hosts: 02-fabric
+  become: yes
+  tasks:
+    - include: roles/fabriccard_common/tasks/upgrade.yml
+      static: yes
+  handlers:
+    - include: handlers/main.yml

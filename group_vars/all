@@ -1,0 +1,189 @@
+linecards:
+    fabric_ports: [fp0, fp1, fp2, fp3, fp4, fp5, fp6, fp7, fp8, fp9, fp10, fp11, fp12, fp13, fp14, fp15]
+
+fabriccards:
+    fabric_ports: [fp0, fp1, fp2, fp3, fp4, fp5, fp6, fp7, fp8, fp9, fp10, fp11, fp12, fp13, fp14, fp15, fp16, fp17, fp18, fp19, fp20, fp21, fp22, fp23, fp24, fp25, fp26, fp27, fp28, fp29, fp30, fp31]
+
+node:
+    act-omp01-lc101:
+        interfaces:
+            lo:
+                ipv4: "10.0.10.1/32"
+
+        bgp:      
+            asn:  4200000101
+
+    act-omp01-lc102:
+        interfaces:
+            lo:
+                ipv4: "10.0.10.2/32"
+
+        bgp:
+            asn: 4200000102
+
+    act-omp01-lc201:
+        interfaces:
+            lo:
+                ipv4: "10.0.20.1/32"
+
+        bgp:
+            asn: 4200000201
+
+    act-omp01-lc202:
+        interfaces:
+            lo:
+                ipv4: "10.0.20.2/32"
+
+        bgp:
+            asn: 4200000202
+
+    act-omp01-lc301:
+        interfaces:
+            lo:
+                ipv4: "10.0.3.1/32"
+
+        bgp:
+            asn: 4200000301
+
+    act-omp01-lc302:
+        interfaces:
+            lo:
+                ipv4: "10.0.30.2/32"
+
+        bgp:
+            asn: 4200000302
+
+    act-omp01-lc401:
+        interfaces:
+            lo:
+                ipv4: "10.0.40.1/32"
+
+        bgp:
+            asn: 4200000401
+
+    act-omp01-lc402:
+        interfaces:
+            lo:
+                ipv4: "10.0.40.2/32"
+
+        bgp:
+            asn: 4200000402
+
+    act-omp01-lc501:
+        interfaces:
+            lo:
+                ipv4: "10.0.50.1/32"
+
+        bgp:
+            asn: 4200000501
+
+    act-omp01-lc502:
+        interfaces:
+            lo:
+                ipv4: "10.0.50.2/32"
+
+        bgp:
+            asn: 4200000502
+
+    act-omp01-lc601:
+        interfaces:
+            lo:
+                ipv4: "10.0.60.1/32"
+
+        bgp:
+            asn: 4200000601
+
+    act-omp01-lc602:
+        interfaces:
+            lo:
+                ipv4: "10.0.60.2/32"
+
+        bgp:
+            asn: 4200000602
+
+    act-omp01-lc701:
+        interfaces:
+            lo:
+                ipv4: "10.0.70.1/32"
+
+        bgp:
+            asn: 4200000701
+
+    act-omp01-lc702:
+        interfaces:
+            lo:
+                ipv4: "10.0.70.2/32"
+
+        bgp:
+            asn: 4200000702
+
+    act-omp01-lc801:
+        interfaces:
+            lo:
+                ipv4: "10.0.80.1/32"
+
+        bgp:
+            asn: 4200000801
+
+    act-omp01-lc802:
+        interfaces:
+            lo:
+                ipv4: "10.0.80.2/32"
+
+        bgp:
+            asn: 4200000802
+    act-omp01-fc101:
+        interfaces:
+            lo:
+                ipv4: "10.1.10.1/32"
+        bgp:
+            asn: 4200990101
+
+    act-omp01-fc102:
+        interfaces:
+            lo:
+                ipv4: "10.1.10.2/32"
+        bgp:
+            asn: 4200990102
+
+    act-omp01-fc201:
+        interfaces:
+            lo:
+                ipv4: "10.1.20.1/32"
+        bgp:
+            asn: 4200990201
+
+    act-omp01-fc202:
+        interfaces:
+            lo:
+                ipv4: "10.1.20.2/32"
+        bgp:
+            asn: 4200990202
+
+    act-omp01-fc301:
+        interfaces:
+            lo:
+                ipv4: "10.1.30.1/32"
+        bgp:
+            asn: 4200990301
+
+    act-omp01-fc302:
+        interfaces:
+            lo:
+                ipv4: "10.1.30.2/32"
+        bgp:
+            asn: 4200990302
+
+    act-omp01-fc401:
+        interfaces:
+            lo:
+                ipv4: "10.1.40.1/32"
+        bgp:
+            asn: 4200990401
+
+    act-omp01-fc402:
+        interfaces:
+            lo:
+                ipv4: "10.1.40.2/32"
+        bgp:
+            asn: 4200990402

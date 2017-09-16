@@ -1,0 +1,17 @@
+---
+- hosts: linecards
+  become: yes
+  tasks:
+  roles:
+    - global_common
+    - linecard_common
+  handlers:
+    - include: handlers/main.yml
+
+- hosts: fabriccards
+  become: yes
+  roles:
+    - global_common
+    - fabriccard_common
+  handlers:
+    - include: handlers/main.yml
