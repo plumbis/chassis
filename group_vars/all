@@ -137,53 +137,53 @@ node:
             lo:
                 ipv4: "10.1.10.1/32"
         bgp:
-            asn: 4200990101
+            asn: 4200000999
 
     act-omp01-fc102:
         interfaces:
             lo:
                 ipv4: "10.1.10.2/32"
         bgp:
-            asn: 4200990102
+            asn: 4200000999
 
     act-omp01-fc201:
         interfaces:
             lo:
                 ipv4: "10.1.20.1/32"
         bgp:
-            asn: 4200990201
+            asn: 4200000999
 
     act-omp01-fc202:
         interfaces:
             lo:
                 ipv4: "10.1.20.2/32"
         bgp:
-            asn: 4200990202
+            asn: 4200000999
 
     act-omp01-fc301:
         interfaces:
             lo:
                 ipv4: "10.1.30.1/32"
         bgp:
-            asn: 4200990301
+            asn: 4200000999
 
     act-omp01-fc302:
         interfaces:
             lo:
                 ipv4: "10.1.30.2/32"
         bgp:
-            asn: 4200990302
+            asn: 4200000999
 
     act-omp01-fc401:
         interfaces:
             lo:
                 ipv4: "10.1.40.1/32"
         bgp:
-            asn: 4200990401
+            asn: 4200000999
 
     act-omp01-fc402:
         interfaces:
             lo:
                 ipv4: "10.1.40.2/32"
         bgp:
-            asn: 4200990402
+            asn: 4200000999
