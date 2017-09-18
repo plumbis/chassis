@@ -11,8 +11,23 @@
   command: net commit
   when: prepend_count.stdout | int < 3
 
+- name: Verify current version
+  command: cat /etc/lsb-release
+  register: old_release
+
+- name: Print Current Version
+  debug: 
+    msg: "{{ old_release.stdout }}"
+
 - name: Verify traffic is drained. This will take a moment...
   interface_stats:
+
+- name: Run Apt Update 
+  command: apt-get -y update
+
+# Command module used to avoid installing Aptitude package, which Ansible relies on
+- name: Run Apt Upgrade
+  command: apt-get -y upgrade
 
 - name: Reboot!
   shell: sleep 2 && shutdown -r now "Ansible reboot triggered"
@@ -20,7 +35,7 @@
   poll: 0
   ignore_errors: true
 
-- name: Wait for leaf to restore. Please stand by...
+- name: Wait for fabric to restore. Please stand by...
   wait_for: >
     host="{{ inventory_hostname }}"
     port="{{ ansible_port }}"
@@ -28,6 +43,15 @@
     timeout=180
   delegate_to: localhost
   become: false
+
+
+- name: Verify upgraded version
+  command: cat /etc/lsb-release
+  register: new_release
+
+- name: Print Upgraded Version
+  debug: 
+    msg: "{{ new_release.stdout }}"
 
 # This is mainly to let netd start
 - name: Give services time to start 
