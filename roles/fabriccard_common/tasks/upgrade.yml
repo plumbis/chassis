@@ -66,3 +66,7 @@
 
 - name: Commit the change
   command: net commit
+
+- name: Check that fabric BGP is established
+  any_errors_fatal: true
+  check_fabric:
