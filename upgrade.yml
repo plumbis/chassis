@@ -1,0 +1,16 @@
+---
+- hosts: 01-cards
+  become: yes
+  tasks:
+    - include: roles/global_common/tasks/upgrade.yml
+      static: yes
+  handlers:
+    - include: handlers/main.yml
+
+- hosts: 02-cards
+  become: yes
+  tasks:
+    - include: roles/global_common/tasks/upgrade.yml
+      static: yes
+  handlers:
+    - include: handlers/main.yml
