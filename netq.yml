@@ -1,0 +1,25 @@
+---
+- hosts: all
+  become: yes
+  tasks:
+    - name: Add Cumulus Repo
+      apt_repository:
+        repo: deb http://apps3.cumulusnetworks.com/repos/deb CumulusLinux-3 netq-1.1
+        state: present
+        update_cache: no
+
+    - name: Install NetQ
+      apt:
+        name: cumulus-netq
+        update_cache: yes
+
+    - name: Restart Rsyslog
+      service:
+        name: rsyslog
+        state: restarted
+
+    - name: Add netq server IP
+      command: netq config add server 10.20.250.43
+
+    - name: Restart NetQ Agent
+      command: netq config agent restart
