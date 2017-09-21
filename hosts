@@ -101,3 +101,10 @@ act-omp01-fc202
 act-omp01-fc302
 act-omp01-fc402
 
+[01-cards:children]
+01-linecards
+01-fabric
+
+[02-cards:children]
+02-linecards
+02-fabric
